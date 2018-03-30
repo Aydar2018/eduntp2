@@ -4,6 +4,8 @@
 int main(int argc, char *argv[])
 {
 system("rm /etc/ntp.conf");
+system("rm /run/ntp.conf.dhcp");
+
 FILE *fd = fopen("/etc/ntp.conf", "w");
 if(strcmp(argv[1],"server")==0)
 {
